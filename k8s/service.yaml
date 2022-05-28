@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  sparkjava-svc
+  namespace: reddy
+spec:
+  selector:
+    app:  sparkjava
+  type:  LoadBalancer 
+  ports:
+  - name:  sparkjava
+    port:  80
+    targetPort:  8080
